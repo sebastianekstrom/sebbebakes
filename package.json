@@ -10,6 +10,7 @@
     "lint:js:dead-code": "node scripts/find-dead-code.js",
     "test:js": "jest",
     "test:types": "tsc",
+    "test:lighthouse": "lhci autorun",
     "test:e2e": "percy exec -- npx playwright test",
     "storybook": "storybook dev -p 6006"
   },
@@ -38,6 +39,7 @@
     "typescript": "4.8.4"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.12.0",
     "@percy/cli": "^1.24.0",
     "@percy/playwright": "^1.0.4",
     "@playwright/test": "^1.33.0",
