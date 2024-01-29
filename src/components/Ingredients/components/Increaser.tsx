@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import Text from "components/Text";
 import pluralize from "pluralize";
+import { Plus } from "icons/Plus";
+import { Minus } from "icons/Minus";
 
 interface Props {
   onDecrease: () => void;
@@ -43,21 +45,7 @@ export const Increaser = ({
           onClick={onDecrease}
           aria-label="Decrease amount"
         >
-          <svg
-            width="13"
-            height="2"
-            viewBox="0 0 13 2"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              x="13"
-              width="2"
-              height="13"
-              transform="rotate(90 13 0)"
-              fill="black"
-            />
-          </svg>
+          <Minus />
         </button>
         <div
           className="text-center"
@@ -88,23 +76,7 @@ export const Increaser = ({
           onClick={onIncrease}
           aria-label="Increase amount"
         >
-          <svg
-            width="13"
-            height="13"
-            viewBox="0 0 13 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect x="5.5" width="2" height="13" fill="black" />
-            <rect
-              x="13"
-              y="5.5"
-              width="2"
-              height="13"
-              transform="rotate(90 13 5.5)"
-              fill="black"
-            />
-          </svg>
+          <Plus />
         </button>
       </div>
     </div>

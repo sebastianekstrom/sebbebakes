@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
+import { Logo } from "icons/Logo";
 
 import Link from "next/link";
 import Text from "components/Text";
@@ -13,17 +13,11 @@ export const Header = () => {
         <div className="flex items-center justify-between py-4 md:py-6 md:space-x-10">
           <div className="flex">
             <Link href="/" aria-label="Go to home page">
-              <Image
-                width={215}
-                height={49}
-                className="w-[180px] md:w-[162px] lg:w-[215px] h-auto"
-                src="/images/misc/logo.svg"
-                alt=""
-              ></Image>
+              <Logo />
             </Link>
           </div>
           <div className="md:hidden h-6 w-6">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md text-regular hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-0">
+            <Popover.Button className="inline-flex items-center justify-center rounded-md text-foreground hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-0">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>

@@ -108,7 +108,7 @@ export const Article = ({ recipe, first, type }: ArticleProps) => {
           <Text>{truncateString(recipe.description, 140)}</Text>
         </div>
       </article>
-      <span className="bg-separator lg:h-[2px] w-full block" />
+      <span className="bg-separator dark:bg-separator-dark lg:h-[2px] w-full block" />
     </div>
   );
 };

@@ -29,11 +29,16 @@ module.exports = {
       colors: {
         regular: "rgba(0,0,0,0.8)",
         "background-regular": "#FEFAF6",
+        "background-regular-dark": "rgb(11, 20, 22)",
+        foreground: "rgba(0,0,0,0.8)",
+        "foreground-dark": "rgb(242, 244, 245)",
         "background-header": "#FFF3E0",
         cta: "#CA9A4A",
         separator: "#E9E9E9",
+        "separator-dark": "#ffffff1a",
         outline: "#ECD7B7",
         "pill-background": "#FFF2E0",
+        "pill-background-dark": "#ffffff1a",
       },
       fontFamily: {
         heading: ["var(--font-heading)"],

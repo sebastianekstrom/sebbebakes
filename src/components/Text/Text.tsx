@@ -55,7 +55,7 @@ export const Text = ({
       return (
         <>
           <p
-            className={`${bodyFont.variable} font-sans text-caption leading-paragraph ${additionalClasses}`}
+            className={`${bodyFont.variable} font-sans text-foreground text-caption leading-paragraph dark:text-foreground-dark ${additionalClasses}`}
           >
             {children}
           </p>
@@ -66,7 +66,7 @@ export const Text = ({
       return (
         <>
           <p
-            className={`${bodyFont.variable} font-sans text-[22px] leading-[32px] md:text-ingress md:leading-ingress font-normal text-regular mb-8 ${additionalClasses}`}
+            className={`${bodyFont.variable} font-sans text-[22px] leading-[32px] md:text-ingress md:leading-ingress font-normal text-foreground dark:text-foreground-dark mb-8 ${additionalClasses}`}
           >
             {children}
           </p>
@@ -77,7 +77,7 @@ export const Text = ({
       return (
         <>
           <p
-            className={`${bodyFont.variable} font-sans text-paragraph text-regular leading-paragraph ${additionalClasses}`}
+            className={`${bodyFont.variable} font-sans text-paragraph text-foreground dark:text-foreground-dark leading-paragraph ${additionalClasses}`}
           >
             {children}
           </p>
@@ -88,7 +88,7 @@ export const Text = ({
       return (
         <h1
           id={anchorID ? id : undefined}
-          className={`${headingFont.variable} font-heading text-[44px] leading-[44px] md:text-h1 md:leading-h1 text-regular mb-8 ${additionalClasses}`}
+          className={`${headingFont.variable} font-heading text-[44px] leading-[44px] md:text-h1 md:leading-h1 text-foreground dark:text-foreground-dark mb-8 ${additionalClasses}`}
         >
           {children}
         </h1>
@@ -97,7 +97,7 @@ export const Text = ({
       const h2 = (
         <h2
           id={anchorID ? id : undefined}
-          className={`${headingFont.variable} font-heading text-[34px] leading-[38px] md:text-h2 md:leading-h2 text-regular ${additionalClasses}`}
+          className={`${headingFont.variable} font-heading text-[34px] leading-[38px] md:text-h2 md:leading-h2 text-foreground dark:text-foreground-dark ${additionalClasses}`}
         >
           {children}
         </h2>
@@ -113,7 +113,7 @@ export const Text = ({
       const h3 = (
         <h3
           id={anchorID ? id : undefined}
-          className={`${headingFont.variable} font-heading text-h3 leading-h3 text-regular ${additionalClasses}`}
+          className={`${headingFont.variable} font-heading text-h3 leading-h3 text-foreground dark:text-foreground-dark ${additionalClasses}`}
         >
           {children}
         </h3>
@@ -128,7 +128,7 @@ export const Text = ({
       const h4 = (
         <h4
           id={anchorID ? id : undefined}
-          className={`${headingFont.variable} font-heading text-h4 leading-h4 text-regular ${additionalClasses}`}
+          className={`${headingFont.variable} font-heading text-h4 leading-h4 text-foreground dark:text-foreground-dark ${additionalClasses}`}
         >
           {children}
         </h4>
@@ -141,7 +141,7 @@ export const Text = ({
     case "logo":
       return (
         <h3
-          className={`${headingFont.variable} ${additionalClasses} font-heading text-[38px] tracking-tight md:text-logo leading-logo text-regular`}
+          className={`${headingFont.variable} ${additionalClasses} font-heading text-[38px] tracking-tight md:text-logo leading-logo text-foreground dark:text-foreground-dark`}
         >
           {children}
         </h3>
@@ -150,7 +150,7 @@ export const Text = ({
       return (
         <>
           <p
-            className={`${bodyFont.variable} font-sans text-paragraph leading-paragraph ${additionalClasses}`}
+            className={`${bodyFont.variable} font-sans text-paragraph leading-paragraph dark:text-foreground-dark ${additionalClasses}`}
           >
             {children}
           </p>

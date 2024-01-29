@@ -48,7 +48,7 @@ export const Table = ({ items, multiplier }: Props) => {
             onClick={toggleBakersPercentage}
             data-testid="BAKERS_PERCENTAGE"
             role="button"
-            className="mt-2 rounded-full text-regular bg-pill-background py-2 px-4"
+            className="mt-2 rounded-full text-foreground bg-pill-background dark:bg-pill-background-dark py-2 px-4"
           >
             <Text variant="caption">
               {showPercentage ? "Hide bakers %" : "Show bakers %"}

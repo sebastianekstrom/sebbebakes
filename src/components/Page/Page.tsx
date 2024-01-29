@@ -6,6 +6,8 @@ import Image from "next/image";
 import Script from "next/script";
 import Text from "components/Text";
 import { RECIPES } from "../../constants/recipes";
+import { Instagram } from "icons/Instagram";
+import { GitHub } from "icons/GitHub";
 
 interface Props {
   children: React.ReactNode;
@@ -70,29 +72,17 @@ export const Page = ({ children, metaTitle, description, image }: Props) => {
           </Text>
         </div>
         <div className="mt-4 flex gap-4">
-          <a href="https://github.com/sebastianekstrom/sebbebakes">
-            <Image
-              src="/icons/github.svg"
-              width={20}
-              height={20}
-              style={{
-                height: 20,
-                width: 20,
-              }}
-              alt="View source on Github.com"
-            />
+          <a
+            href="https://github.com/sebastianekstrom/sebbebakes"
+            className="w-[20px] h-[20px]"
+          >
+            <GitHub />
           </a>
-          <a href="https://www.instagram.com/sebbebakes">
-            <Image
-              src="/icons/instagram.svg"
-              width={20}
-              height={20}
-              style={{
-                height: 20,
-                width: 20,
-              }}
-              alt="Visit Sebbe bakes on Instagram"
-            />
+          <a
+            href="https://www.instagram.com/sebbebakes"
+            className="w-[20px] h-[20px]"
+          >
+            <Instagram />
           </a>
         </div>
       </footer>

@@ -25,7 +25,7 @@ export const Step = ({ index, step, completable }: Props) => {
         <div className="flex items-center justify-between self-start">
           <button type="button" onClick={onClick}>
             <Text
-              classNames={`w-[40px] h-[40px] bg-pill-background font-semibold rounded-full flex justify-center items-center !mb-0 transition-opacity ${
+              classNames={`w-[40px] h-[40px] bg-pill-background dark:bg-pill-background-dark font-semibold rounded-full flex justify-center items-center !mb-0 transition-opacity ${
                 isCompleted ? "opacity-10" : ""
               }`}
             >
