@@ -34,6 +34,7 @@ export const Row = ({
         done ? "opacity-10" : ""
       }`}
       onClick={onMarkDone}
+      role="button"
     >
       <div className={item.tooltip ? "flex flex-row items-center" : ""}>
         <Text classNames="font-semibold">{item.label}</Text>
