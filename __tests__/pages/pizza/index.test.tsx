@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../tooling/tests";
 import Pizza from "pages/pizza/index";
 
 describe("Pizza", () => {

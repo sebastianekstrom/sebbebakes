@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../tooling/tests";
 import HybridDough from "pages/pizza/hybrid-dough";
 
 describe("HybridDough page", () => {

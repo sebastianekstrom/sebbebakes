@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../tooling/tests";
 import AlabamaSlammer from "pages/food-and-drinks/alabama-slammer";
 
 describe("AlabamaSlammer page", () => {
