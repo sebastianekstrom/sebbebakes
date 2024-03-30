@@ -207,6 +207,20 @@ export const RECIPES: Recipe[] = [
       "This iconic Vietnamese bread is known for its fluffy interior and thin, soft crust, perfect for loading up with chicken or pork, pickled carrots and daikon, pâté, chili, and cucumber.",
   },
   {
+    title: "Things I wish I knew before I started cooking",
+    url: "/guides/things-i-wish-i-knew-before-i-started-cooking",
+    category: CATEGORIES.guide,
+    thumbnails: {
+      hero: require("../../public/images/techniques/things-i-wish-i-knew-before-i-started-cooking/thumbnails/hero.png"),
+      tall: require("../../public/images/techniques/things-i-wish-i-knew-before-i-started-cooking/thumbnails/tall.png"),
+      wide: require("../../public/images/techniques/things-i-wish-i-knew-before-i-started-cooking/thumbnails/wide.png"),
+      square: require("../../public/images/techniques/things-i-wish-i-knew-before-i-started-cooking/thumbnails/square.png"),
+      meta: require("../../public/images/techniques/things-i-wish-i-knew-before-i-started-cooking/thumbnails/meta.png"),
+    },
+    description:
+      "Over 20 years of fumbling around in the kitchen, I've picked up a few tricks. Let's dive into some that actually worked.",
+  },
+  {
     title: "Gear for baking",
     url: "/guides/gear-for-baking",
     category: CATEGORIES.guide,
