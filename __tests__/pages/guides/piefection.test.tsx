@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../tooling/tests";
 import Piefection from "pages/guides/piefection";
 
 describe("Piefection page", () => {

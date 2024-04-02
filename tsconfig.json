@@ -18,7 +18,7 @@
     "paths": {
       "public/*": ["../public/*"],
       "pages/*": ["../src/pages/*"],
-      "tests/*": ["tooling/tests/*"]
+      "tests/*": ["../tooling/tests/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

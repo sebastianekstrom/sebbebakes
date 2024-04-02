@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../tooling/tests";
 import GarlicOil from "pages/food-and-drinks/garlic-oil";
 
 describe("GarlicOil page", () => {

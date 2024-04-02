@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../tooling/tests";
 import SimpleLoaf from "pages/bread/the-simple-loaf";
 
 describe("SimpleLoaf page", () => {
