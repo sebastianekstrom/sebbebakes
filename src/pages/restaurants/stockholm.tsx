@@ -11,6 +11,8 @@ import { Text } from "components/Text/Text";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import { RESTAURANTS } from "../../constants/restaurants/stockholm";
+import type { Restaurant } from "../../constants/restaurants/stockholm";
+import { sortRestaurants } from "utils/sortRestaurants";
 
 export const getStaticProps = async () => {
   return {
@@ -25,6 +27,9 @@ export default function Stockholm({ mapboxKey }: { mapboxKey: string }) {
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
   const [mapHeight, setMapHeight] = useState<number | null>(null);
+  const [sortedRestaurants, setSortedRestaurants] = useState<Restaurant[]>(
+    sortRestaurants(RESTAURANTS, "default"),
+  );
 
   useEffect(() => {
     const updateMapHeight = () => {
@@ -104,14 +109,14 @@ export default function Stockholm({ mapboxKey }: { mapboxKey: string }) {
           ref={mapRef as any}
           mapboxAccessToken={mapboxKey}
           initialViewState={{
-            latitude: RESTAURANTS[0].coordinates.latitude,
-            longitude: RESTAURANTS[0].coordinates.longitude,
+            latitude: sortedRestaurants[0].coordinates.latitude,
+            longitude: sortedRestaurants[0].coordinates.longitude,
             zoom: 14,
           }}
           style={{ width: "100%", height: mapHeight }}
           mapStyle="mapbox://styles/mapbox/streets-v9"
         >
-          {RESTAURANTS.map((restaurant, index) => {
+          {sortedRestaurants.map((restaurant, index) => {
             const latitude = restaurant.coordinates.latitude;
             const longitude = restaurant.coordinates.longitude;
             return (

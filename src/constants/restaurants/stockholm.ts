@@ -1,4 +1,4 @@
-type MichelinRating = 1 | 2 | 3 | "Bib";
+export type MichelinRating = 1 | 2 | 3 | "Bib";
 
 interface Chef {
   name: string;
@@ -15,7 +15,7 @@ interface Coordinates {
   latitude: number;
 }
 
-interface Restaurant {
+export interface Restaurant {
   name: string;
   coordinates: Coordinates;
   image: string;
