@@ -1,6 +1,6 @@
 import type { Restaurant } from "./types";
 
-export const RESTAURANTS: Restaurant[] = [
+export const STOCKHOLM: Restaurant[] = [
   {
     name: "Bar Agrikultur",
     coordinates: {
