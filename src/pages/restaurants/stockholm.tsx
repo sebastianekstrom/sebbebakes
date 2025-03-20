@@ -3,7 +3,7 @@ import React from "react";
 import metaImage from "public/images/restaurants/stockholm/metaImage.jpg";
 
 import { STOCKHOLM } from "../../constants/restaurants/stockholm";
-import { RestaurantPage } from "components/RestaurantPage/RestaurantPage";
+import RestaurantPage from "components/RestaurantPage/RestaurantPage";
 
 export const getStaticProps = async () => {
   return {
@@ -19,6 +19,7 @@ export default function Stockholm({ mapboxKey }: { mapboxKey: string }) {
       restaurants={STOCKHOLM}
       city="Stockholm"
       metaImage={metaImage}
+      mapboxKey={mapboxKey}
     />
   );
 }

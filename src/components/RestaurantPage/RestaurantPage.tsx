@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import MapBox, { Marker } from "react-map-gl/mapbox";
+import MapBox from "react-map-gl/mapbox";
 import type { MapRef } from "react-map-gl/mapbox";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import { Page } from "components/Page/Page";
+import { Marker } from "./components/Marker";
 
 import { Text } from "components/Text/Text";
 
@@ -16,10 +17,15 @@ interface Props {
   restaurants: Restaurant[];
   city: string;
   metaImage: StaticImageData;
+  mapboxKey: string;
 }
 
-export const RestaurantPage = ({ restaurants, city, metaImage }: Props) => {
-  const mapboxKey = process.env.MAPBOX_KEY;
+export default function RestaurantPage({
+  restaurants,
+  city,
+  metaImage,
+  mapboxKey,
+}: Props) {
   const mapRef = useRef<MapRef>();
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -118,14 +124,15 @@ export const RestaurantPage = ({ restaurants, city, metaImage }: Props) => {
           mapStyle="mapbox://styles/mapbox/streets-v9"
         >
           {restaurants.map((restaurant, index) => {
-            const latitude = restaurant.coordinates.latitude;
-            const longitude = restaurant.coordinates.longitude;
+            const { latitude, longitude } = restaurant.coordinates;
+
             return (
-              <button
+              <Marker
                 key={restaurant.name}
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
+                longitude={longitude}
+                latitude={latitude}
+                restaurant={restaurant}
+                onClick={() => {
                   flyEaglesFly({
                     longitude,
                     latitude,
@@ -141,35 +148,7 @@ export const RestaurantPage = ({ restaurants, city, metaImage }: Props) => {
                     });
                   }
                 }}
-              >
-                <Marker
-                  longitude={longitude}
-                  latitude={latitude}
-                  anchor="bottom"
-                >
-                  <div className="bg-brand flex text-brand-secondary px-2 py-1 gap-2 items-center rounded-sm relative">
-                    <Image
-                      width={140}
-                      height={56.6}
-                      className="w-[10px] h-auto fill-brand-secondary"
-                      src="/images/misc/icon-food.svg"
-                      alt=""
-                    />
-                    <Text variant="badge" classNames="text-brand-secondary">
-                      {restaurant.name}
-                    </Text>
-                    <div className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 text-bg-brand">
-                      <Image
-                        width={140}
-                        height={56.6}
-                        className="w-[20px] h-auto"
-                        src="/images/misc/icon-chevron.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </Marker>
-              </button>
+              />
             );
           })}
         </MapBox>
@@ -297,4 +276,4 @@ export const RestaurantPage = ({ restaurants, city, metaImage }: Props) => {
       </div>
     </Page>
   );
-};
+}
